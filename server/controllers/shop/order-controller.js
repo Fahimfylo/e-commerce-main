@@ -55,7 +55,6 @@ export const createOrder = async (req, res) => {
       })),
       mode: "payment",
       success_url: `${process.env.CLIENT_URL}/shop/stripe-success?orderId=${newlyCreatedOrder._id}`,
-      // Payment cancel বা fail হলে এই URL-এ redirect হবে
       cancel_url: `${process.env.CLIENT_URL}/shop/payment-failed`,
     });
 
